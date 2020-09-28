@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>additional 3</title>
+        <style>
+            table td,tr{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="margin-left: 10px; margin-right: 10px;">
+            <div style="text-align: center;">
+                <h1>Тег &lt;figure&gt; и &lt;figcaption&gt;</h1>
+                <div>
+                    <h2>Описание тегов</h2>
+                    <dl style="text-align: left;">
+                        <dt>&lt;figure&gt;</dt>
+                        <dd>Данный тег является блочным. Предназначен для отображения картинок , диаграмм,
+                            видео, аудио, кода <br>с необязательной подписью. 
+                            Используется в том случае , если содержимое
+                            относится к <br>отдельному элементу кода и может быть удалено из потока без
+                            потери смысловой нагрузки контента</dd>
+                        <dt>&lt;figcaption&gt;</dt>
+                        <dd>Данный тег является описанием для тега &lt;figure&gt; и используется вместе с ним.
+                            <br>Должен быть единственным в теге &lt;figure&gt;. Вставляется или перед контентом,
+                            <br>или после контента тега &lt;figure&gt;.
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <h2 style="text-align: center;">Пример использования тегов</h2>
+                <div style="display: flex; justify-content: space-around;">
+                <figure style="text-align: center;">
+                    <img src="images/car.png" weight="241px" height="210px" alt="car" title="car"/>
+                    <figcaption>Mercedes-Benz G 63 AMG</figcaption>
+                </figure>
+                <figure>
+                    <figcaption style="padding-bottom: 20px;">Таблица истинности для коньюнкции</figcaption>
+                    <table style="border-collapse: collapse; width: 200px; text-align: center;
+                    margin-left: auto; margin-right: auto;">
+                        <thead>
+                            <tr>
+                                <td>A</td>
+                                <td>B</td>
+                                <td>A&B</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+                </div>
+            </div>
+            <div>
+                <h2 style="text-align: center;">Плюсы и минусы</h2>
+                <div>
+                    <h3>Плюсы:</h3>
+                    <ul>
+                        <li>Не надо создавать блок для картинки и подписи вмесе.
+                            <br>Получается как бы инкапсуляция => лучшая читаемость кода</li>
+                        <li>Можно группировать несколько изображений</li>
+                        <li>Могут быть проблемы с отображением в некоторых
+                            <br>браузерах, т.к. тег моложе чем img
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Минусы:</h3>
+                    <ul>
+                        <li>По смыслу используется только если помещаемый контент
+                            <br>будет связан с каким-то элементом страницы. Т.е. при
+                            <br>его удалении смысл страницы не потеряется.
+                        </li>
+                        <li>С помощью него не удобно будет загружать фоновые изображения</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
