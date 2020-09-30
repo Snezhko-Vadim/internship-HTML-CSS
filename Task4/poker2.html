@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>background-test</title>
+        <style>
+            .content{
+                background-color: white;
+                padding: 5px;
+            }
+            .bold-words{
+                font-weight: bold;
+            }
+            .combinations-menu{
+                border: 2px solid green;
+                padding: 20px;
+            }
+            .combinations-menu div{
+                width: 140px;
+                height: 190px;
+                display: inline-block;
+                background: url(images/cards2.png);
+            }
+            .combinations-menu div:nth-child(1){
+                background-position: 0px -2328px;
+            }
+            .combinations-menu div:nth-child(2){
+                background-position: -144px -2134px;
+            }
+            .combinations-menu div:nth-child(3){
+                background-position: -288px -1940px;
+            }
+            .combinations-menu div:nth-child(4){
+                background-position: -432px -1746px;
+            }
+            .combinations-menu div:nth-child(5){
+                background-position: -144px -1552px;
+            }
+            body{
+                background-color: cyan;
+            }
+            .flexible-frame{
+            }
+            .flexible-frame-ltcorner{
+                width:99px;
+                height:99px;
+            }
+            .flexible-frame-top{
+                background: url(images/2.gif);
+                height: 99px;
+            }
+            .flexible-frame-rtcorner{
+                width:100px;
+                height:99px;
+            }
+            .flexible-frame-left{
+                background: url(images/4.gif);   
+            }
+            .flexible-frame-right{
+                background: url(images/6.gif);
+            }
+            .flexible-frame-lbcorner{
+                height: 104px;
+            }
+            .flexible-frame-bottom{
+                background: url(images/8.gif)
+            }
+            .flexible-frame-rbcorner{
+                height: 104px;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="flexible-frame" width="100%" cellspacing="0" cellpadding="0">
+            <tr style="height:95px;">
+                <td class="flexible-frame-ltcorner"><img src="images/1.gif" width="99px" height="99px" alt=""></td>
+                <td class="flexible-frame-top"></td>
+                <td class="flexible-frame-rtcorner"><img src="images/3.gif" width="100px" height="99px" alt=""></td>
+            </tr>
+            <tr>
+                <td class="flexible-frame-left"></td>
+                <td class="content">
+                    <div>
+                        <h1>Покер</h1>
+                        <p>
+                            <span class="bold-words">По́кер</span> (англ. poker) — карточная игра, цель которой — выиграть ставки, собрав как можно более высокую покерную комбинацию, используя 4 (старый классический вариант), или 5 карт, или вынудив всех соперников прекратить участвовать в игре. Игра идёт с полностью или частично закрытыми картами. Конкретные правила могут варьироваться в зависимости от разновидности покера. Обобщающими элементами всех разновидностей покера являются комбинации и наличие торговли в процессе игры.
+                        </p>
+                        <p>
+                            Ввиду того, что игрок не знает карты своих противников, покер является игрой с неполной информацией, как и многие другие карточные игры, в отличие от, например, шахмат, в которых оба игрока видят положение всех фигур на доске.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Комбинация в покере — стрит</h2>
+                        <div class="combinations-menu">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </td>
+                <td class="flexible-frame-right"></td>
+            </tr>
+            <tr>
+                <td class="flexible-frame-lbcorner"><img src="images/7.gif" height="104px" alt=""></td>
+                <td class="flexible-frame-bottom"></td>
+                <td class="flexible-frame-rbcorner"><img src="images/9.gif" height="104px" alt=""></td>
+            </tr>
+        </table>
+    </body>
+</html>
