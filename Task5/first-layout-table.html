@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>first-lyout-table</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            .football{
+                width: 100%;
+                height: 100vh;
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .football tr:first-child{
+                height: 60px;
+            }
+            .football tr:last-child{
+                height: 80px;
+            }
+            .menu{
+                width: 250px;
+            }
+            .img-winners{
+                width: 300px;
+                height: 200px;
+                padding: 0 20px 20px 20px;
+            }
+            .football tr p{
+                padding-right: 20px;
+            }
+            .football tr:nth-child(2){
+                height: 100%;
+            }
+            .football tr:nth-child(2) td:first-child{
+                padding: 0;
+            }
+            .football tr:nth-child(2) td:last-child{
+                text-align: center;
+                vertical-align: middle;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 28px;
+                height: 55px;
+            }
+            .football tr:nth-child(3) td:last-child{
+                vertical-align: bottom;
+                font-size: 21px;
+                margin: 0;
+            }
+            .football tr:nth-child(3) td:last-child p:first-child{
+                margin-top: 0;
+                line-height:30px;
+            }
+            .football tr:nth-child(3) td:last-child p:last-child{
+                margin-bottom: 0;
+                line-height:30px;
+            }
+            .football tr:nth-child(4) td:last-child{
+                vertical-align: top;
+                font-size: 21px;
+                padding-left: 20px;
+                padding-bottom: 20px;
+                line-height:30px;
+            }
+            .football tr:first-child td{
+                font-size: 30px;
+                color: blue;
+                background-color:#add8e6;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .football tr:last-child td:last-child{
+                font-size: 30px;
+                color: blue;
+                background-color: #add8e6 ;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .menu{
+                background-color: #f0e68c;
+                height: 100%;
+                padding-left: 20px;
+            }
+            .menu h2{
+                margin: 0;
+                padding: 10px 0;
+            }
+            .menu ul{
+                padding-left: 15px;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="football">
+            <tr>
+                <td colspan="3"> привет участникам соревнований</td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    <div class="menu">
+                        <h2>Виды спрота</h2>
+                        <ul>
+                            <li><a href="#">конькобежный спорт</a></li>
+                            <li><a href="#">биатлон</a></li>
+                            <li><a href="#">футбол</a></li>
+                            <li><a href="#">стрельба из лука</a></li>
+                            <li><a href="#">прыжки в длину</a></li>
+                            <li><a href="#">прыжки в высоту</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td colspan="2">футбол</td>
+            </tr>
+            <tr>
+                <td><img class="img-winners" src="images/winners.png" alt="winners"></td>
+                <td><p>футбол - коммандный вид спорта, в котором целью является забить мяч в ворота соперника ногами или другими частями тела(кроме рук) большее количество раз, чем команда соперника. </p>
+                <p>Есть 17 официальных правил игры, каждое из которых содержит список оговорок и руководящих принципов. Эти правила</p></td>
+            </tr>
+            <tr>
+                <td colspan="2">предназначены для применения на всех уровнях футбола, хотя есть некоторые изменения для таких групп, как юниоры, взрослые, женшины, и люди с ограниченными физическими способностями. Законы очень часто формулировались в общих чертах , которые позволяют упростить их применения в зависимости от характера игры</td>
+            </tr>
+            <tr>
+                <td colspan="3">главное не победа, а участие!</td>
+            </tr>
+        </table>
+    </body>
+</html>
