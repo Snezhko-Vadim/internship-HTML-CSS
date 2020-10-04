@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>background-test</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            .clearfix:after {
+                content: " "; 
+                visibility: hidden;
+                display: block;
+                height: 0;
+                clear: both;
+                }
+            .art{
+                width: 100%;
+                height: 100vh;
+            }
+            .art div:nth-child(1){
+                height: 25%;
+                width: 100%;
+                background-color: yellow ;
+            }
+            .art div:nth-child(2){
+                height: 25%;
+                width: 50%;
+                float: left;
+                background-color:green ;
+            }
+            .art div:nth-child(3){
+                height: 25%;
+                width: 50%;
+                float: right;
+                background-color:blue ;
+            }
+            .art div:nth-child(4){
+                height: 25%;
+                width: 33.33%;
+                background-color:orange ;
+                float: left;
+            }
+            .art div:nth-child(5){
+                height: 25%;
+                width: 33.33%;
+                background-color:darkmagenta ;
+                float: left;
+            }
+            .art div:nth-child(6){
+                height: 25%;
+                width: 33.33%;
+                background-color:red ;
+                float: left;
+            }
+            .art div:nth-child(7){
+                height: 25%;
+                width: 100%;
+                float: left;
+                background-color:aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="art clearfix">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

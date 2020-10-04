@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>html5 logo</title>
+    <link href="css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+	<style>
+        body{
+            background-color: black;
+        }
+        h1{
+            font-family:'Open Sans', sans-serif;
+            text-align: center;
+            color: white;
+            font-weight: normal;
+        }
+        .slider{
+            width: 1200px;
+            height: 425px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .slider-background {
+            position: absolute;
+        }
+        .prev-pointer, .next-pointer{
+            width: 70px;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        .slider-content{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0 75px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .num-slides{
+            text-align: center;
+            list-style-type: none;
+            font-size: 10px;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .num-slides li{
+            display:inline-block;
+            padding-left: 10px;
+        }
+        .num-slides li i{
+            color: white;
+        }
+        .prev-pointer{
+            top: 0;
+            left: 0;
+            background: url(images/prev-next-sprite.png);
+            background-repeat:no-repeat;
+            background-position: 30px;
+        }
+        .next-pointer{
+            top: 0;
+            right: 0;
+            background: url(images/prev-next-sprite.png);
+            background-repeat: no-repeat;
+            background-position: -30px;
+        }
+        .text{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        .text h2{
+            text-transform: uppercase;
+            font-family:'Open Sans', sans-serif;
+            font-size: 35px;
+            font-weight: normal;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+        .text p{
+            font-family:'Open Sans', sans-serif;
+            font-size: 20px;
+        }
+	</style>
+</head>
+<body>
+    <h1>Вёрстка заготовки для слайдера</h1>
+	<div class="slider">
+        <img class="slider-background" src="images/slider-img-01.jpg" alt="slider-background"/>
+            <a class="prev-pointer" href="#"></a>
+        <div class="slider-content">
+            <div class="text">
+                <h2>Комфортная одежда</h2>
+                <p>для всех видов спорта</p>
+            </div>
+            <ul class="num-slides">
+                <li><a href="#"><i class="fas fa-square"></i></a></li>
+                <li><a href="#"><i class="fas fa-square"></i></a></li>
+                <li><a href="#"><i class="fas fa-square"></i></a></li>
+                <li><a href="#"><i class="fas fa-square"></i></a></li>
+            </ul>
+        </div>
+            <a class="next-pointer" href="#"></a>
+	</div>
+</body>
+</html>

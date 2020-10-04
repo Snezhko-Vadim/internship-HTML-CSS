@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>first-lyout-div</title>
+        <style>
+            .clearfix:after {
+                content: " "; 
+                visibility: hidden;
+                display: block;
+                height: 0;
+                clear: both;
+            }
+            body{
+                margin: 0;
+                background-color: #00ffff;
+            }
+            .news-section{
+                min-width: 320px;
+                max-width: 960px;
+                padding: 0 10px;
+                border: 1px solid #888888;
+                background-color: white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+            }
+            .header{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .header h2{
+                width: 50%;
+                float: left;
+                margin: 0;
+                font-weight: normal;
+            }
+            .header p{
+                width: 50%;
+                float: right;
+                margin: 0;
+                text-align: right;
+            }
+            .news{
+                width: 33.1%;
+                min-width: 300px;
+                float: left;
+                margin-top: 25px;
+            }
+            .news .image img{
+                width: 60px;
+                height: 60px;
+            }
+            .image{
+                float: left;
+            }
+            .news-content{
+                padding-left: 65px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .news-content .date{
+                margin-top: 0;
+                color: #444444;
+            }
+            .news-content .title{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="news-section">
+            <div class="header clearfix">
+                <h2>Новости</h2>
+                <p><a href="#">Показать весь архив</a></p>
+            </div>
+            <div class="main clearfix">
+                <div class="news clearfix">
+                    <div class="image">
+                        <img src="images/news.png" alt="news-icon"/>
+                    </div>
+                    <div class="news-content">
+                        <p class="date">30 ноября 2014</p>
+                        <p class="title"><a href="#">Важная информация с 1 декабря 2014 года</a></p>
+                    </div>
+                </div>
+                <div class="news clearfix">
+                    <div class="image">
+                        <img src="images/news.png" alt="news-icon"/>
+                    </div>
+                    <div class="news-content">
+                        <p class="date">29 ноября 2014</p>
+                        <p class="title"><a href="#">План мероприятий на декабрь 2014 года</a></p>
+                    </div>
+                </div>
+                <div class="news clearfix">
+                    <div class="image">
+                        <img src="images/news.png" alt="news-icon"/>
+                    </div>
+                    <div class="news-content">
+                        <p class="date"> 25 ноября 2014</p>
+                        <p class="title"><a href="#">Поздравляем того кто родился 25 ноября с др</a></p>
+                    </div>
+                </div>
+                <div class="news clearfix">
+                    <div class="image">
+                        <img src="images/news.png" alt="news-icon"/>
+                    </div>
+                    <div class="news-content">
+                        <p class="date">10 ноября 2014</p>
+                        <p class="title"><a href="#">Итоги автовыставки 2014</a></p>
+                    </div>
+                </div>
+                <div class="news clearfix">
+                    <div class="image">
+                        <img src="images/news.png" alt="news-icon"/>
+                    </div>
+                    <div class="news-content">
+                        <p class="date">7 ноября 2014</p>
+                        <p class="title"><a href="#">Перебои в работе ВКонтакте</a></p>
+                    </div>
+                </div>
+                <div class="news clearfix">
+                    <div class="image">
+                        <img src="images/news.png" alt="news-icon"/>
+                    </div>
+                    <div class="news-content">
+                        <p class="date">5 ноября 2014</p>
+                        <p class="title"><a href="#">Спортивные новости</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
