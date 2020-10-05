@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>css chess</title>
+  <style>
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  table td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+  }
+  tr:nth-child(odd) td:nth-child(odd){
+      background-color: white;
+  }
+  tr:nth-child(even) td:nth-child(odd){
+      background-color: black;
+  }
+  tr:nth-child(odd) td:nth-child(even){
+      background-color: black;
+  }
+  tr:nth-child(even) td:nth-child(even){
+      background-color: white;
+  }
+  .chess tr:first-child td {
+      height: 20px;
+      background-color: #90ee90;
+  }
+  .chess tr:last-child td {
+      height: 20px;
+      background-color: #90ee90;
+  }
+  .chess tr td:first-child{
+      width: 20px;
+      background-color: #90ee90;
+  }
+  .chess tr td:last-child{
+      width: 20px;
+      background-color: #90ee90;
+  }
+</style>
+</head>
+<body>
+  <table class="chess">
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  </table>
+
+</body>
+</html>
