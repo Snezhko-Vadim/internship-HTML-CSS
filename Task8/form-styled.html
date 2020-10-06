@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+    <link href="assets/css/all.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: #d3d3d3;
+        }
+        .clearfix:after {
+            content: " ";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        .feedback{
+            background-color: white;
+            max-width: 600px;
+            border: 2px solid #6499ff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .wrapper{
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-name{
+            background-color: #6499ff;
+        }
+        .main-name h2{
+            margin: 0;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100%;
+            color: white;
+            padding: 15px 0;
+            font-family: sans-serif;
+            font-weight: normal;
+        }
+        .main-name h2 i{
+            padding-right: 5px;
+        }
+        .field-layout{
+            margin-bottom: 30px;
+        }
+        .field-layout .field-name{
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .field input, .field textarea{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            padding-left: 42px;
+            border: 1px solid #b6b6b6;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+        .field input:focus , .field textarea:focus{
+            outline: none;
+            border: 2px solid #6499ff;
+        }
+        .field{
+            position: relative;
+            color: #b6b6b6;
+        }
+        .field i{
+            position: absolute;
+            font-size: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            padding-left: 10px;
+            width: 22px;
+            height: 22px;
+            text-align: center;
+        }
+        .field-layout:nth-child(4) i{
+            top: 0;
+            transform: translateY(0%);
+            padding-top:10px;
+        }
+        .field-layout:nth-child(4){
+            margin-bottom: 0;
+        }
+        .btn{
+            color: white;
+            background-color: #6499ff;
+            border: none;
+            padding: 10px 50px;
+            border-radius: 5px;
+            margin: 25px auto;
+            cursor: pointer;
+            outline: none;
+        }
+        .btn:hover{
+            transition-duration: 100ms;
+            transform: scale(1.05);
+        }
+        .btn:active{
+            transition-duration: 50ms;
+            opacity: 0.6;
+        }
+        .button{
+            text-align: center;
+        }
+        .field-name__modified{
+            float: left;
+            width: 50%;
+        }
+        .field__modified{
+            float: left;
+            width: 50%;
+            transform: translateX(-50%);
+        }
+        .field-layout__modified{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .field-layout__modified:after {
+            content: " ";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <form class="feedback feedback__modified">
+        <div class="main-name">
+            <div class="wrapper">
+                <h2><i class="fas fa-home"></i>Обратная связь</h2>
+            </div>
+        </div>
+        <div class="fields">
+            <div class="wrapper">
+                <div class="field-layout field-layout__modified">
+                    <h3 class="field-name field-name__modified">Имя:</h3>
+                    <div class="field field__modified">
+                        <i class="far fa-user"></i>
+                        <input placeholder="Введите ваше имя">
+                    </div>
+                </div>
+                <div class="field-layout field-layout__modified">
+                    <h3 class="field-name field-name__modified">Ваш Email:</h3>
+                    <div class="field field__modified">
+                        <i class="far fa-envelope"></i>
+                        <input placeholder="Введите адрес Вашей почты">
+                    </div>
+                </div>
+                <div class="field-layout field-layout__modified">
+                    <h3 class="field-name field-name__modified">Ваш телефон:</h3>
+                    <div class="field field__modified">
+                        <i class="fas fa-mobile-alt"></i>
+                        <input placeholder="Введите номер телефона">
+                    </div>
+                </div>
+                <div class="field-layout">
+                    <h3 class="field-name">Сообщение:</h3>
+                    <div class="field">
+                        <i class="fas fa-pencil-alt"></i>
+                        <textarea placeholder="Текст сообщения..." rows="8" cols="60"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <div class="wrapper">
+                <input class="btn" type="button" value="Отправить">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
