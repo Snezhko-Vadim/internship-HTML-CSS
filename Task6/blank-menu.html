@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>blank-menu</title>
+  <style>
+      .clearfix:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+        }
+        body{
+            background-color: #808080;
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+      .menu{
+          background-color: #2c2c2c;
+          color: white;
+      }
+      .menu-btn{
+          background: none;
+          border: none;
+          padding: 5px 15px;
+          color: white;
+          display: flex;
+          align-items: center;
+      }
+      .menu-btn span{
+        padding-left: 5px;
+      }
+      .menu-item{
+        float: left;
+      }
+      .menu-btn::before{
+          content:' ';
+          background: url(images/css_sprites.png);
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background-position: -17px -20px;
+      }
+      .menu-item:nth-child(1) .menu-btn::before{
+        background-position: -150px -16px;
+      }
+      .menu-item:nth-child(2) .menu-btn::before{
+        background-position: -283px -20px;
+      }
+      .menu-item:nth-child(3) .menu-btn::before{
+        background-position: -546px -17px;
+        }
+        .menu-item:nth-child(4) .menu-btn::before{
+            background-position: -744px -17px;
+        }
+        .menu-item:nth-child(5) .menu-btn::before{
+            background-position: -1008px -20px;
+        }
+      .menu-btn:hover{
+          background-color: #326599;
+          cursor: pointer;
+      }
+      .extra-menu{
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          visibility: hidden;
+          list-style-type: none;
+      }
+      .extra-menu-lvl-2{
+        position: absolute;
+          left: 100%;
+          top: 0;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          visibility: hidden;
+          list-style-type: none;
+      }
+      .menu-item:nth-child(1):hover .extra-menu{
+          visibility: visible;
+      }
+      .menu-item:nth-child(3):hover .extra-menu{
+          visibility: visible;
+      }
+      .menu-item:nth-child(3) .extra-menu-item:nth-child(2):hover .extra-menu-lvl-2{
+          visibility: visible;
+      }
+      .extra-menu-btn{
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        border-left: 5px solid white;
+        background-color: white;
+      }
+      .extra-menu-btn span{
+          color: #7f8184;
+      }
+      .extra-menu-btn:hover{
+          background-color: #c6c6c6;
+          border-left: 5px solid #275f99;
+      }
+      .menu-item:nth-child(1){
+          position: relative;
+      }
+      .menu-item:nth-child(3){
+          position: relative;
+      }
+      .menu-item:nth-child(3) .extra-menu-item:nth-child(2){
+        position: relative;
+      }
+</style>
+</head>
+<body>
+    <h1>Многоуровневое горизонтальное меню</h1>
+    <div class="menu clearfix">
+        <div class="menu-item">
+            <button class="menu-btn"><span>Главная</span></button>
+            <ul class="extra-menu">
+                <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 1</span></button></li>
+                <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 2</span></button></li>
+                <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 3</span></button></li>
+            </ul>
+        </div>
+        <div class="menu-item">
+            <button class="menu-btn"><span>О нас</span></button>
+        </div>
+        <div class="menu-item">
+            <button class="menu-btn"><span>Партфолио</span></button>
+            <ul class="extra-menu">
+                <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 1</span></button></li>
+                <li class="extra-menu-item">
+                    <button class="extra-menu-btn"><span>Уровень 3 меню</span></button>
+                    <ul class="extra-menu-lvl-2">
+                        <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 4</span></button></li>
+                        <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 5</span></button></li>
+                        <li class="extra-menu-item"><button class="extra-menu-btn"><span>Подменю 6</span></button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-item">
+            <button class="menu-btn"><span>Блог</span></button>
+        </div>
+        <div class="menu-item">
+            <button class="menu-btn"><span>Контакты</span></button>
+        </div>
+    </div>
+</body>
+</html>

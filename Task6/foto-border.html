@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>foto-border</title>
+  <style>
+      body{
+        text-align: center;
+      }
+      .border{
+          display: inline-block;
+          margin-top: 100px;
+          position: relative;
+          padding: 0 10px 10px 0;
+      }
+      .image{
+          border: 10px solid #90ee90;
+          height: 180px;
+      }
+      .border::after{
+          content: url('http://placehold.it/380x180');
+          display: inline-block;
+          border: 10px solid #006400;
+          height: 180px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          z-index: -2;
+      }
+      .border::before{
+        content: url('http://placehold.it/380x180');
+          display: inline-block;
+          border: 10px solid #008000;
+          height: 180px;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          z-index: -1;
+      }
+      /* body{
+          margin-top: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .foto-border{
+          display: inline-block;
+          position: relative;
+      }
+      .foto-border::after{
+          content: url(http://placehold.it/380x180);
+          border: 10px solid #006400;
+          width: 380px;
+          height: 180px;
+          position: absolute;
+          left: 5px;
+          top:5px;
+      }
+      .foto-border::before{
+          content: url(http://placehold.it/380x180);
+          border: 10px solid #90ee90;
+          width: 380px;
+          height: 180px;
+      }
+      .image{
+        border: 10px solid #008000;
+        width: 380px;
+        height: 180px;
+        position: absolute;
+        left: 0px;
+        top:0px;
+      } */
+</style>
+</head>
+<body>
+    <div class="border">
+        <img class="image" src="http://placehold.it/380x180" alt="image"/>
+    </div>
+</body>
+</html>

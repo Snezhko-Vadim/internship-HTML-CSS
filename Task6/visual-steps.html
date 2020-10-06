@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>visual-steps</title>
+  <style>
+      .clearfix:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+        }
+        .visual-steps{
+            display: flex;
+            justify-content: center;
+        }
+      .visual-steps ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+      }
+      .steps{
+          position: relative;
+          width: 40px;
+          height: 40px;
+          border: 2px solid #cccccc;
+          border-radius: 100%;
+          float: left;
+          margin-left: 30px;
+          font-size: 20px;
+      }
+      .steps:first-child{
+          margin-left: 0;
+      }
+      .steps:after{
+          content:'';
+          position: absolute;
+          height: 2px;
+          width: 32px;
+          background-color: #cccccc;
+          transform: translateY(-50%);
+          top: 50%;
+          left: 100%;
+      }
+      .steps:last-child::after{
+          content: none;
+      }
+      .steps:nth-child(4){
+          background-color: #ab4a9c;
+      }
+      .steps:last-child{
+          background-color: #cccccc;
+          color: black;
+      }
+      .steps span{
+          position: absolute;
+          top:50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+      }
+</style>
+</head>
+<body>
+    <div class="visual-steps">
+        <ul class="clearfix">
+            <li class="steps"><span>1</span></li>
+            <li class="steps"><span>2</span></li>
+            <li class="steps"><span>3</span></li>
+            <li class="steps"><span>4</span></li>
+            <li class="steps"><span>5</span></li>
+        </ul>
+    </div>
+</body>
+</html>
