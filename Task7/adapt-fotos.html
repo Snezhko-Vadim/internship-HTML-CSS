@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>gallary</title>
+    <style>
+        .clearfix:after {
+            content: " ";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+            }
+            body{
+                margin: 0;
+            }
+            .site{
+                min-width: 320px;
+            }
+            .name{
+                text-align: center;
+            }
+            .wrapper{
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .image{
+                width: 30%;
+                float: left;
+                margin-left: 5%;
+                margin-top: 30px;
+            }
+            .image:nth-child(3n+1){
+                margin-left: 0;
+            }
+            .image img{
+                width: 100%;
+            }
+            @media (min-width:480px ) and (max-width: 768px){
+                .gallary .image:nth-child(n){
+                width: 45%;
+                margin-left: 5%;
+            }
+            .image:nth-child(odd){
+                margin-left: 0;
+            }
+            }
+            @media (max-width: 480px){
+                .gallary .image:nth-child(n){
+                width: 100%;
+                margin-left: 0;
+            }
+            }
+    </style>
+</head>
+<body>
+    <div class="gallary">
+        <div class="wrapper clearfix">
+            <h1 class="name">Адаптивная вёрстка галереи</h1>
+            <div class="images">
+                <div class="image"><img src="images/cat_apofiss_drawing_cute_cat_94591_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/child_river_dreams_127495_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/gorod_art_nebo_127834_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/kot_milyj_shar_127642_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/kreativ_ruka_syurrealizm_avtomobil_chasy_ananas_kot_96125_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/les_prud_voda_128182_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/run_person_speed_23756_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/sketch_risunok_naushniki_chashka_stol_117210_1920x1080.jpg" alt=""></div>
+                <div class="image"><img src="images/train_mountains_art_130351_1920x1080.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
