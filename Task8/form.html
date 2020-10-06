@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+    <style>
+        body{
+            background-color: #d3d3d3;
+        }
+        .main-feedback{
+            padding: 20px 0;
+            background-color: white;
+            width: 600px;
+        }
+        .wrapper{
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h2{
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        .field-item{
+            margin-bottom: 30px;
+        }
+        .field-item h3{
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .field-item input{
+            width: 50%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-feedback">
+        <div class="wrapper">
+            <form class="feedback">
+                <h2>Обратная связь</h2>
+                <div class="fields">
+                    <div class="field-item">
+                        <h3>Имя:</h3>
+                        <input placeholder="Введите ваше имя">
+                    </div>
+                    <div class="field-item">
+                        <h3>Ваш Email:</h3>
+                        <input placeholder="Введите адрес Вашей почты">
+                    </div>
+                    <div class="field-item">
+                        <h3>Ваш телефон:</h3>
+                        <input placeholder="Введите номер телефона">
+                    </div>
+                    <div class="field-item">
+                        <h3>Сообщение:</h3>
+                        <textarea placeholder="Текст сообщения..." rows="8" cols="60"></textarea>
+                    </div>
+                    <input class="button" type="button" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

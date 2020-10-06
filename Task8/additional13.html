@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>additional</title>
+    <link href="assets/css/all.css" rel="stylesheet">
+    <style>
+        body{
+            background:url(images/fon.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .authorization{
+            max-width: 500px;
+            background-color: white;
+            margin: 0 auto;
+            position: relative;
+        }
+        .wrapper{
+            max-width: 500px;
+            padding: 30px 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .title{
+            text-align: center;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        .title span{
+            position: relative;
+            padding: 0 30px;
+        }
+        .title span::after{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: black;
+            right: 0px;
+            top: 50%;
+            transform: translateX(100%) translateY(-50%);
+        }
+        .title span::before{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: black;
+            left: 0px;
+            top: 50%;
+            transform: translateX(-100%) translateY(-50%);
+        }
+        .content{
+            background-color: #ff7e68;
+            border-radius: 10px;
+            padding: 20px 30px 0 30px;
+        }
+        .fields{
+            position: relative;
+        }
+        .fields .fields-item{
+            width: 100%;
+            background-color: #ffd5ce;
+            border: none;
+            padding: 15px 10px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .fields .fields-item:focus{
+            background-color: white;
+        }
+        .fields .fields-item:nth-child(1){
+            margin-bottom: 2px;
+            border-radius: 5px 5px 0 0;
+        }
+        .fields .fields-item:nth-child(2){
+            border-radius: 0 0 5px 5px;
+        }
+        .pass-rec{
+            margin: 0;
+            margin-top:10px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .pass-rec a{
+            text-decoration: none;
+            padding-left: 5px;
+        }
+        .btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -20px;
+            background-color: #ff5335;
+            font-size: 20px;
+            color: white;
+            border-radius: 50%;
+            border: 5px solid #ff7e68;
+            width: 60px;
+            height: 60px;
+            z-index: 1;
+            cursor: pointer;
+            outline: none;
+        }
+        .btn:hover{
+            transition-duration: 100ms;
+            transition-property:all;
+            border: 5px solid #ff5335;
+        }
+        .btn:active{
+            transition-duration: 20ms;
+            transition-property:all;
+            width: 50px;
+            height: 50px;
+            right: -10px;
+        }
+    </style>
+</head>
+<body>
+    <form class="authorization">
+        <div class="wrapper">
+            <h2 class="title"><span>Авторизируйтесь</span></h2>
+            <div class="content">
+                <div class="fields">
+                    <input class="fields-item" placeholder="Логин">
+                    <input class="fields-item" type="password" placeholder="Пароль">
+                    <button class="btn"><i class="fas fa-long-arrow-alt-right"></i></button>
+                </div>
+                <p class="pass-rec">Забыли логин или пароль?<a href="#">Напомним!</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
