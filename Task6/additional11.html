@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>chat</title>
+  <style>
+      body{
+          margin: 0;
+          background-color: #f0f1f1;
+      }
+      .chat ul{
+        list-style-type: none;
+      }
+      .clearfix:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+        }
+        .message, .avatar{
+            float: left;
+            background-color: white;
+        }
+        .message{
+            max-width: 700px;
+            /* Установил ограничение чтобы при наборе большого текста блок в итоге не нырял под аватар. Если этого не сделать, то можно другим способом. Выкинуть из потока аватар , а тексту установить паддинг лэфт размером аватара + нужный нам отступ от аватара. Но мне кажется так лучше)) */
+        }
+        .avatar img{
+            width: 50px;
+            height: 50px;
+            border-radius: 3px;
+        }
+        .avatar{
+            padding: 5px;
+            border: 1px solid #cccdcd;
+            border-radius: 3px;
+            width: 50px;
+            height: 50px;
+        }
+        .answers{
+            padding-left: 100px;
+        }
+        .message{
+            min-height: 62px;
+            border: 1px solid #cccdcd;
+            border-radius: 5px;
+            margin-left: 20px;
+            padding: 10px 5px;
+            box-sizing: border-box;
+        }
+        .message p{
+            margin: 0;
+            padding: 0;
+        }
+        .message p:first-child{
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        .message-layout{
+            padding-bottom: 20px;
+        }
+        .user-name{
+            font-weight: bold;
+        }
+        .questions-item .avatar{
+            position: relative;
+        }
+        .questions-item > .message-layout .avatar::after{
+            content:'';
+          position: absolute;
+          height: 500px;
+          width: 1px;
+          background-color: #cccdcd;
+          transform: translateX(-50%);
+          top: 100%;
+          left: 50%;
+        }
+        .answers .avatar::before{
+            content:'';
+          position: absolute;
+          height: 1px;
+          width: 69px;
+          background-color: #cccdcd;
+          transform: translateY(-50%) translateX(-101%);
+          top: 50%;
+          left: 0;
+        }
+        .answers .avatar::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-left: 8px solid #cccdcd;
+            border-bottom: 4px solid transparent;
+            transform: translateY(-50%) translateX(-101%);
+            top: 50%;
+            left: 0;
+        }
+</style>
+</head>
+<body>
+    <div class="chat">
+        <ul class="questions">
+            <li class="questions-item">
+                <div class="message-layout clearfix">
+                    <div class="avatar">
+                        <img src="images/Snezhok.jpg" alt="avatar"/>
+                    </div>
+                    <div class="message">
+                        <p><span class="user-name">vm_snezhok</span> Спрашивает:</p>
+                        <p>Автомобиль 4-й Гольф, трехдверка 2001-го г.в. После дождя целое озеро Н2O возникает в углублении под запаску! Очень прошу помочь тех, кто сталкивался с этой проблемой!</p>
+                    </div>
+                </div>
+                <ul class="answers">
+                    <li class="answers-item">
+                        <div class="message-layout clearfix">
+                            <div class="avatar">
+                                <img src="images/avatar.jpg" alt="avatar"/>
+                            </div>
+                            <div class="message">
+                                <p><span class="user-name">Oleggg</span> Отвечает:</p>
+                                <p>посмотри в первую очередь задние фонари. у меня шла вода через правый.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="answers-item">
+                        <div class="message-layout clearfix">
+                            <div class="avatar">
+                                <img src="images/avatar.jpg" alt="avatar"/>
+                            </div>
+                            <div class="message">
+                                <p><span class="user-name">Sanya228</span> Отвечает:</p>
+                                <p>У меня тоже дело было в уплотнителе фонаря! снял фару, поправил уплотнитель и герметиком еще смазал! и все ОК.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="answers-item">
+                        <div class="message-layout clearfix">
+                            <div class="avatar">
+                                <img src="images/avatar.jpg" alt="avatar"/>
+                            </div>
+                            <div class="message">
+                                <p><span class="user-name">Zhenya123</span> Отвечает:</p>
+                                <p>У меня тоже на одной машине (субару) вода текла через задний фонарь.
+                                    После дождя и от керхера в особености в багажнике болото было.
+                                    Посадил его на незасыхающий герметик (по совету сервисменов), помогло.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="answers-item">
+                        <div class="message-layout clearfix">
+                            <div class="avatar">
+                                <img src="images/avatar.jpg" alt="avatar"/>
+                            </div>
+                            <div class="message">
+                                <p><span class="user-name">User1241</span> Отвечает:</p>
+                                <p>Я думаю снять обшивку и посмотреть шланчик который подходит к форсунке омывателя. А может и резинка кирдык.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="answers-item">
+                        <div class="message-layout clearfix">
+                            <div class="avatar">
+                                <img src="images/avatar.jpg" alt="avatar"/>
+                            </div>
+                            <div class="message">
+                                <p><span class="user-name">Guest12534</span> Отвечает:</p>
+                                <p>таже неприятность была, еле нашел в чем дело - уплотнитель задней фары. Устранил так: герметиком мазать не стал - нетехнологично ))))
+                                    потому снял обе фары, (чтобы уже наверняка), дочиста отмыл уплотнители, рассеиватели и посадочные места.
+                                    Дальше, - поскольку уплотнители немного растеряли свои св-ва, вырезал из старой камеры полоски резины, наклеил в продавленное в уплотнителях рассеивателями место, по всему периметру. Все высушил, поставил на место, хорошо затянул....
+                                    Все, порядок ! ненужно ничего мазать, пачкать.....</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
