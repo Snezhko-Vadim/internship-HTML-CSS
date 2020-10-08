@@ -22,15 +22,11 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            .chess tr:nth-child(odd) td:nth-child(odd){
-                background-color: white;
-            }
-            .chess tr:nth-child(odd) td:nth-child(even){
-                background-color: rgba(0,0,0,0.5);
-            }
+            .chess tr:nth-child(odd) td:nth-child(odd),
             .chess tr:nth-child(even) td:nth-child(even){
                 background-color: white;
             }
+            .chess tr:nth-child(odd) td:nth-child(even),
             .chess tr:nth-child(even) td:nth-child(odd){
                 background-color: rgba(0,0,0,0.5);
             }
@@ -40,17 +36,15 @@
                 background-color: white;
                 height: 30px;
             }
+            .chess tr:nth-child(9n+1) td:first-child,
             .chess tr:nth-child(9n+1) td:last-child{
-                border-bottom: none;
-                border-top: none;
-            }
-            .chess tr:nth-child(9n+1) td:first-child{
                 border-bottom: none;
                 border-top: none;
             }
             .chess tr:nth-child(n) td:nth-child(9n+1){
                 border-left: 2px solid black;
                 border-right: 2px solid black;
+                background: none;
                 background-color: white;
                 width: 20px;
             }
@@ -58,25 +52,14 @@
                 border-left: none;
                 border-right: none;
             }
+            .chess tr:nth-child(5n+3) td,
             .chess tr:nth-child(7n+2) td{
                 background: url(images/chess.png);
             }
-            .chess tr:nth-child(5n+3) td{
-                background: url(images/chess.png);
-            }
-            .chess tr:nth-child(7n+2) td:first-child{
-                background:none;
-                background-color: white;
-            }
+            .chess tr:nth-child(5n+3) td:first-child,
+            .chess tr:nth-child(5n+3) td:last-child,
+            .chess tr:nth-child(7n+2) td:first-child
             .chess tr:nth-child(7n+2) td:last-child{
-                background: none;
-                background-color: white;
-            }
-            .chess tr:nth-child(5n+3) td:first-child{
-                background: none;
-                background-color: white;
-            }
-            .chess tr:nth-child(5n+3) td:last-child{
                 background: none;
                 background-color: white;
             }
