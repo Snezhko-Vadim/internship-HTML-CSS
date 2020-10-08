@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>вакханалия какая-то)))</title>
+    <style>
+        .element:nth-child(1){
+            width: 100px;
+            height: 50px;
+            background-color: tomato;
+        }
+        .element:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: wheat;
+            border-radius: 50%;
+        }
+        .element:nth-child(3){
+            width: 100px;
+            height: 10px;
+            background: linear-gradient( to left,blue,violet);
+        }
+        .element:nth-child(4){
+            width: 100px;
+            height: 50px;
+            background-color: rgb(14, 61, 24);
+            border-radius: 0 0 100px 100px;
+        }
+        .element:nth-child(5){
+            width: 200px;
+            height: 50px;
+            background-color: rgb(194, 157, 163);
+            border-radius: 100px 100px 100px 100px;
+            position: relative;
+        }
+        @keyframes spin{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+        .anim{
+            animation: spin 1.3s linear infinite;
+        }
+        .element:nth-child(5) p{
+            position: absolute;
+            font-size: 20px;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            margin: 0%;
+        }
+        .elements{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+        }
+        @keyframes scale{
+            from{
+                transform:scale(1);
+            }
+            to{
+                transform:scale(2);
+            }
+        }
+        @keyframes color {
+            10%{
+                background-color: #ff0000;
+            }
+            20%{
+                background-color: #ff9900;
+            }
+            30%{
+                background-color: #fffb00;
+            }
+            40%{
+                background-color: #00ff00;
+            }
+            50%{
+                background-color: #00ffc8;
+            }
+            60%{
+                background-color: #00c3ff;
+            }
+            70%{
+                background-color: #0004ff;
+            }
+            80%{
+                background-color: #a200ff;
+            }
+            90%{
+                background-color: #ff00d4;
+            }
+            100%{
+                background-color: #ff0000;
+            }
+        }
+        @keyframes turning {
+            25%{
+                transform: rotateZ(-45deg);
+            }
+            50%{
+                transform: rotateZ(0deg);
+            }
+            75%{
+                transform: rotateZ(45deg);
+            }
+            100%{
+                transform: rotateZ(0deg);
+            }
+        }
+        @keyframes scaleXY {
+            from{
+                transform: scaleX(1) scaleY(1);
+            }
+            to{
+                transform: scaleX(0.5) scaleY(1.5);
+            }
+        }
+        .elements:hover .element:nth-child(1){
+            animation: scale 1s linear infinite alternate;
+        }
+        .elements:hover .element:nth-child(2){
+            animation: color 1s linear infinite alternate;
+        }
+        .elements:hover .element:nth-child(4){
+            animation: turning 1.5s linear infinite normal;
+        }
+        .elements:hover .element:nth-child(3){
+            animation: scaleXY 0.5s linear infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="elements">
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element anim"><p>сардэля</p></div>
+    </div>
+</body>
+</html>

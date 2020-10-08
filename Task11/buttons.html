@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>buttonas</title>
+    <style>
+        .btn:first-child{
+            outline: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            background:radial-gradient(at center, #ff9900, #000000);
+            border-radius: 7px;
+            font-weight: bold;
+        }
+        .btn:first-child:hover{
+            box-shadow: 0 0px 7px 2px black;
+        }
+        .btn:first-child:active{
+            transform: scale(0.9);
+            transition-duration: 20ms;
+        }
+        .btn:nth-child(2){
+            outline: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            background: linear-gradient(red,blue);
+            color: rgb(133, 179, 231);
+        }
+        .btn:nth-child(2):hover{
+            transform: scale(1.1);
+            transition-duration: 40ms;
+            box-shadow:4px 4px 10px 1px black;
+        }
+        .btn:nth-child(2):active{
+            background: linear-gradient(blue, red);
+        }
+        .btn:nth-child(4){
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: silver;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+        }
+        .btn:nth-child(4):hover{
+            background: radial-gradient(ellipse,silver,rgb(207, 89, 89) 200%);
+        }
+        .btn:nth-child(5){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 12px;
+            background-color: sandybrown;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .btn:nth-child(5):active{
+            background: radial-gradient(rgb(255, 255, 255),sandybrown 100%);
+        }
+        .btn:nth-child(5):hover{
+            transition-duration: 400ms;
+            transform: scale(1.1);
+            text-shadow: 0 0 5px rgb(0, 0, 0);
+            font-size: 15px;
+        }
+        .btn:nth-child(3){
+            padding: 10px 15px;
+            background-color: tomato;
+            border-radius: 10px;
+        }
+        .btn:nth-child(3):active{
+            background: radial-gradient(tomato,rgb(0, 0, 0) 200%);
+        }
+        .btn:nth-child(3):hover{
+            box-shadow:4px 4px 10px 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button class="btn">Кнопочка</button>
+        <input class="btn" type="button" value="Кнопка">
+        <span class="btn">Ещё кнопочка</span>
+        <a href="#" class="btn" id="boom">Не нажимай, взорвусь</a>
+        <div class="btn">
+            <span>кноооопка!!!</span>
+        </div>
+    </div>
+    <script>
+        let inf;
+        document.getElementById('boom').onclick =(target)=>{
+            let elemStyle=target.currentTarget.style;
+            elemStyle.background="radial-gradient(ellipse,rgb(255, 255, 255),rgb(216, 6, 6) 100%)";
+            elemStyle.transform="scale(5)";
+            elemStyle.borderRadius="50%";
+            elemStyle.boxShadow="0px 0px 80px 20px red";
+            elemStyle.opacity="0";
+            elemStyle.transitionDuration="500ms"
+        }
+    </script>
+</body>
+</html>
