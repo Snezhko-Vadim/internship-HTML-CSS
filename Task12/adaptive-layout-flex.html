@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            margin: 0;
+        }
+        .wrapper{
+            padding: 0 0px;
+            height: 100%;
+        }
+        .page-content{
+            display: flex;
+        }
+        .header-content{
+            display: flex;
+            height: 100%;
+            background-color: #00bfff;
+            padding: 0 20px;
+            padding-left: 0px;
+            height: 40px;
+        }
+        .footer-content{
+            display: flex;
+            height: 100%;
+            background-color: #90ee90;
+            padding: 20px;
+            justify-content: space-between;
+        }
+        .logo{
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo a{
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            width: 150px;
+            height: 100%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav{
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-area: nav;
+            width: 100%;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+        }
+        main{
+            width: 57.4%;
+        }
+        .aside-type-1{
+            background-color: #ffd700;
+            text-align: center;
+            width: 21.3%;
+            margin: 0;
+        }
+        .aside-type-2{
+            background-color: #ff69b4;
+            text-align: center;
+            width: 21.3%;
+            margin: 0;
+        }
+        .aside-type-1 h3{
+            margin-top: 10px;
+        }
+        .aside-type-2 h3{
+            margin-top: 10px;
+        }
+        main{
+            background-color: #00ffff;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+        .copy{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .socials-bar{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .socials-bar a{
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        @media (min-width: 375px) and (max-width:760px ){
+        .header-content{
+            flex-direction: column;
+            padding: 0 20px;
+            padding-left: 0px;
+            height: 80px;
+        }
+        nav{
+            justify-content: space-around;
+            height: 50%;
+        }
+        .logo{
+            height: 50%;
+        }
+        main{
+            width: 100%;
+            order: 1;
+        }
+        .aside-type-1{
+            width: 50%;
+            order: 2;
+        }
+        .aside-type-2{
+            width: 50%;
+            order: 3;
+        }
+        .page-content{
+            flex-wrap: wrap;
+        }
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+        }
+        .copy{
+            justify-content: center;
+            margin: 20px 0;
+            order: 1;
+        }
+        .socials-bar{
+            justify-content: space-around;
+            margin-bottom: 20px;
+            order: 2;
+        }
+        .aside-type-1 h3 , .aside-type-2 h3{
+            margin: 0;
+        }
+        }
+        @media (max-width:375px ){
+            .header-content{
+            flex-direction: column;
+            padding: 0 ;
+            height: 140px;
+        }
+        nav{
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+        nav a{
+            margin:0;
+            border: 1px ridge #2ac9ff;
+            width: 100%;
+            text-align: center;
+            padding: 3px 0;
+            border-collapse: collapse;
+        }
+        .logo{
+            height: 40px;
+        }
+        main{
+            width: 100%;
+            order: 1;
+        }
+        .aside-type-1{
+            width: 50%;
+            order: 2;
+        }
+        .aside-type-2{
+            width: 50%;
+            order: 3;
+        }
+        .page-content{
+            flex-wrap: wrap;
+        }
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+        .copy{
+            justify-content: center;
+            margin: 20px 0;
+            order: 1;
+        }
+        .socials-bar{
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+            order: 2;
+        }
+        .socials-bar a{
+            border-collapse: collapse;
+            margin:0;
+            border: 1px ridge #87e087;
+            width: 100%;
+            text-align: center;
+            padding: 3px 0;
+        }
+        .aside-type-1 h3 , .aside-type-2 h3{
+            margin: 0;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#">Logo</a>
+                </div>
+                <nav>
+                    <a href="#">Главная</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Продукты</a>
+                    <a href="#">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="wrapper">
+            <div class="page-content">
+                <div class="aside-type-1">
+                    <h3>Aside-type-1</h2>
+                </div>
+                <main>
+                    <h1>What is Lorem Ipsum?</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h2>Why do we use it?</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                </main>
+                <div class="aside-type-2">
+                    <h3>Aside-type-2</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <div class="footer-content">
+                <div class="copy">
+                    <span>&copy;Copyright 2017</span>
+                </div>
+                <div class="socials-bar">
+                    <a href="#">Twittir</a>
+                    <a href="#">Vkontakte</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
