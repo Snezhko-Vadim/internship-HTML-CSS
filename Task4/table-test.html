@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>background-test</title>
+        <style>
+            tbody tr td{
+                border: 2px solid blue;
+                padding: 5px;
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+            }
+            thead tr{
+                border: 2px solid blue;
+                background-color: #888888;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+            }
+            thead td{
+                padding: 5px;
+            }
+            .str1 td:nth-last-child(-n+2),.str1 td:nth-child(1),.str2 td:nth-last-child(-n+2),.str3 td:nth-last-child(-n+2),.str4 td:nth-last-child(-n+2),.str4 td:nth-child(1),.str5 td:nth-last-child(-n+2),.str6 td:nth-last-child(-n+2),.str7 td:nth-last-child(-n+2),.str8 td:nth-last-child(-n+2),.str9 td:nth-last-child(-n+2),.str10 td:nth-last-child(-n+2),.str10 td:nth-child(1),.str11 td:nth-last-child(-n+2){
+                text-align: center;
+            }
+            .str6 td:nth-child(1),.str11 td:nth-child(1){
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Пример сложной таблицы</h1>
+        <table id="table">
+            <thead>
+                <tr class="str0">
+                    <td>Название1</td>
+                    <td>Название2</td>
+                    <td>Ещё название</td>
+                    <td>Куча элементов</td>
+                    <td>Список1</td>
+                    <td>Список2</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="str1">
+                    <td rowspan="11">JPMC</td>
+                    <td rowspan="5">CST</td>
+                    <td rowspan="3">CT</td>
+                    <td>ADS</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr class="str2">
+                    <td>BTO</td>
+                    <td>2</td>
+                    <td>15</td>
+                </tr>
+                <tr class="str3">
+                    <td>CSI</td>
+                    <td>3</td>
+                    <td>16</td>
+                </tr>
+                <tr class="str4">
+                    <td rowspan="2">VCT</td>
+                    <td>ADS</td>
+                    <td>4</td>
+                    <td>10</td>
+                </tr>
+                <tr class="str5">
+                    <td>BTO</td>
+                    <td>5</td>
+                    <td>15</td>
+                </tr>
+                <tr class="str6">
+                    <td colspan="3">Sub Total</td>
+                    <td>6</td>
+                    <td>15</td>
+                </tr>
+                <tr class="str7">
+                    <td rowspan="4">CST</td>
+                    <td rowspan="3">CT</td>
+                    <td>ADS</td>
+                    <td>7</td>
+                    <td>10</td>
+                </tr>
+                <tr class="str8">
+                    <td>BTO</td>
+                    <td>8</td>
+                    <td>15</td>
+                </tr>
+                <tr class="str9">
+                    <td>CSI</td>
+                    <td>9</td>
+                    <td>16</td>
+                </tr>
+                <tr class="str10">
+                    <td>VCT</td>
+                    <td>ADS</td>
+                    <td>10</td>
+                    <td>10</td>
+                </tr>
+                <tr class="str11">
+                    <td colspan="3">Sub Total</td>
+                    <td>11</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

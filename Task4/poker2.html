@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>background-test</title>
+        <style>
+            .content{
+                background-color: white;
+                padding: 5px;
+                border-image-source: url("images/ramka.png");
+                border-image-slice: 70;
+                border-image-repeat: repeat;
+                border-style: solid;
+                border-width: 60px;
+            }
+            .bold-words{
+                font-weight: bold;
+            }
+            .combinations-menu{
+                border: 2px solid green;
+                padding: 20px;
+            }
+            .combinations-menu div{
+                width: 140px;
+                height: 190px;
+                display: inline-block;
+                background: url(images/cards2.png);
+            }
+            .combinations-menu div:nth-child(1){
+                background-position: 0px -2328px;
+            }
+            .combinations-menu div:nth-child(2){
+                background-position: -144px -2134px;
+            }
+            .combinations-menu div:nth-child(3){
+                background-position: -288px -1940px;
+            }
+            .combinations-menu div:nth-child(4){
+                background-position: -432px -1746px;
+            }
+            .combinations-menu div:nth-child(5){
+                background-position: -144px -1552px;
+            }
+            body{
+                background-color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div>
+                <h1>Покер</h1>
+                <p>
+                    <span class="bold-words">По́кер</span> (англ. poker) — карточная игра, цель которой — выиграть ставки, собрав как можно более высокую покерную комбинацию, используя 4 (старый классический вариант), или 5 карт, или вынудив всех соперников прекратить участвовать в игре. Игра идёт с полностью или частично закрытыми картами. Конкретные правила могут варьироваться в зависимости от разновидности покера. Обобщающими элементами всех разновидностей покера являются комбинации и наличие торговли в процессе игры.
+                </p>
+                <p>
+                    Ввиду того, что игрок не знает карты своих противников, покер является игрой с неполной информацией, как и многие другие карточные игры, в отличие от, например, шахмат, в которых оба игрока видят положение всех фигур на доске.
+                </p>
+            </div>
+            <div>
+                <h2>Комбинация в покере — стрит</h2>
+                <div class="combinations-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
