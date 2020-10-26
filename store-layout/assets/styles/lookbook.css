@@ -1,8 +1,8 @@
 .wrapper{
     padding: 0 134px;
     max-width: 2050px;
-    width: 100%;
     height: 100%;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -115,9 +115,6 @@
     position: relative;
     box-sizing: border-box;
 }
-.header-content_height_home{
-    height: 920px;
-}
 .logo{
     flex-basis: 890px;
     justify-content: start;
@@ -125,13 +122,9 @@
 }
 .nav-bar{
     display: flex;
-    padding: 35px 0;
 }
 .header-content__nav-bar{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1;
+    padding: 35px 0;
 }
 .nav-bar_fixed-top{
     width: 100%;
@@ -148,6 +141,7 @@
     justify-content: space-between;
     align-items: baseline;
     flex-basis: 580px;
+    padding: 0 10px;
     box-sizing: border-box;
 }
 .nav__item{
@@ -197,7 +191,7 @@
     transition-duration: 100ms;
     transform: scale(1.15);
 }
-.nav__item:active:not(.nav__item_arrow) .nav__btn{
+.nav__item:active:not(.nav__itemarrow) .nav__btn{
     color: black;
     transition-property:all;
     transition-duration: 100ms;
@@ -256,54 +250,6 @@
     font-size: 14px;
     padding: 8px 10px;
 }
-.header-slider{
-    position: relative;
-    background-image: url("../images/home/header-slider.png");
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.header-slider__wrapper{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 2050px;
-    margin: 0 auto;
-}
-.header-slider__text{
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 100%;
-    font-size: 23.5vw;
-    color: #575153;
-    text-transform: uppercase;
-    font-family: "Montserrat";
-    letter-spacing: 50px;
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-}
- .header-slider__btn{
-     position: absolute;
-     right: 330px;
-     bottom: 125px;
-     height: 60px;
-     width: 340px;
-     font-size: 16px;
- }
- .header-slider__btn:hover{
-    background-color: #00c8c8;
-    color: white;
-    border-color: #00c8c8;
-}
-.header-slider__btn:active{
-    transform: scale(0.95);
-    opacity: 0.5;
-    transition-duration: 50ms;
-}
  .btn{
     display: flex;
     align-items: center;
@@ -315,6 +261,11 @@
     font-family: "Montserrat";
     cursor: pointer;
  }
+ .btn:hover{
+     background-color: #00c8c8;
+     color: white;
+     border-color: #00c8c8;
+ }
  .sub-nav{
      width: 455px;
      background-color: #f8f8f8;
@@ -323,7 +274,7 @@
      display: none;
      left: 0;
      top:100%;
-     z-index: 1;
+     z-index: 4;
  }
  .sub-nav__container{
      padding: 30px;
@@ -356,10 +307,10 @@
      color: #727272;
      text-decoration: none;
  }
- .menu__item:hover:not(.menu__item_not-clickable){
-     color: #00c8c8;
- }
- .menu__item:active:not(.menu__item_not-clickable){
+ .menu__item:hover:not(.menu__itemnot-clickable){
+    color: #00c8c8;
+}
+.menu__item:active:not(.menu__itemnot-clickable){
     transform: scale(0.95);
     transition-duration: 50ms;
  }
@@ -373,12 +324,12 @@
     cursor: pointer;
  }
  .banner:hover{
-     box-shadow: 0px 0px 15px 2px rgba(0, 200, 200, .7);
-     transition-duration: 150ms;
- }
- .banner:active{
-    transform: scale(0.97);
+    box-shadow: 0px 0px 15px 2px rgba(0, 200, 200, .7);
     transition-duration: 150ms;
+}
+.banner:active{
+   transform: scale(0.97);
+   transition-duration: 150ms;
 }
  .banner__bold-text{
     font-weight: bold;
@@ -399,6 +350,74 @@
  .header_margin{
      margin-bottom: 62px;
  }
+ .intro{
+    background: url('../images/the-brand/header-slider.png');
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+.intro::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .35);
+}
+.intro__text{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100%;
+   z-index: 1;
+
+}
+.intro__title{
+    margin: 0 0 50px 0;
+    font-size: 48px;
+    font-family: "Montserrat";
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 54px;
+    font-weight: 500;
+}
+.intro__slogan{
+   font-size: 30px;
+   font-family: "Montserrat";
+   color: #ffffff;
+   text-transform: uppercase;
+   font-weight: 500;
+   line-height: 54px;
+   margin: 0;
+}  
+.intro__letters{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 22.4vw;
+    font-family: "Montserrat";
+    color: rgba(248, 248, 248, 0.22);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    line-height: 0.7;
+    padding: 0 134px;
+    box-sizing: border-box;
+} 
+ .bold-word{
+     font-weight: bold;
+ }
 .main__nav{
     flex-basis: 690px;
     justify-content: space-between;
@@ -412,94 +431,60 @@
     border-bottom: 1px solid #eeeeee;
 }
 .products-container{
-    margin-top: 62px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+      margin: 0 auto;
+      margin-top: 62px;
+      grid-template-areas: 
+    "pi-1 pi-2 lookbook-1 lookbook-1"
+    "pi-3 pi-4 pi-5 pi-6"
+    "lookbook-2 lookbook-2 lookbook-2 pi-7";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
 }
-.products-container__column{
-    width: 48.8%;
-    display: flex;
-    flex-direction: column;
+.products-item:nth-child(1){
+    grid-area: pi-1;
 }
-.products-container__row{
-    display: flex;
-    justify-content: space-between;
+.products-item:nth-child(2){
+    grid-area: pi-2;
 }
-.products-container__column:nth-child(1) .products-container__row:nth-child(1) .products-item,
-.products-container__column:nth-child(2) .products-container__row:nth-child(2) .products-item{
-    width: 48.8%;
+.products-item:nth-child(3){
+    grid-area: lookbook-1;
 }
-.products-container__column:nth-child(1) .products-container__row:nth-child(1),
-.products-container__column:nth-child(2) .products-container__row:nth-child(1){
-    margin-bottom: 1vw;
+.products-item:nth-child(4){
+    grid-area: pi-3;
+}
+.products-item:nth-child(5){
+    grid-area: pi-4;
+}
+.products-item:nth-child(6){
+    grid-area: pi-5;
+}
+.products-item:nth-child(7){
+    grid-area: pi-6;
+}
+.products-item:nth-child(8){
+    grid-area: lookbook-2;
+}
+.products-item:nth-child(9){
+    grid-area: pi-7;
 }
 .products-item{
     position: relative;
-    cursor: pointer;
+    display: flex;
 }
 .products-item:hover .products-item__more-information{
     display: block;
 }
-.products-item:hover{
+.products-item:hover:not(.products-item_win-a-new-book):not(.products-item_janes-lookbook){
     box-shadow: 0px 17px 24px 0px rgba(0, 0, 0, .17);
 }
 .products-item__image{
     width: 100%;
+    max-width: 420px;
+    max-height: 500px;
 }
-.products-item__title{
-    margin: 0;
-    margin-bottom: 20px;
-    font-size: 13px;
-    font-family: "Montserrat";
-    text-transform: uppercase;
-    text-align: center;
-    color: #727272;
-}
-.products-item__description{
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-family: "Roboto";
-    text-align: center;
-    color: #8e8c8c;
-}
-.products-item__info{
-    padding: 20px 50px;
-    position: absolute;
-    box-sizing: border-box;
-    width: 100%;
-    top: 98%;;
-    z-index: 1;
-    background-color: white;
-    box-shadow: 0px 17px 24px 0px rgba(0, 0, 0, .17);
-}
-.products-item__btns{
-    display: flex;
-    justify-content: space-between;
-    width: 120px;
-    margin: 0 auto;
-}
-.products-item__btns-item{
-    color:white;
-    background-color: #727272;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    border-radius: 50%;
-    text-decoration: none;
-}
-.products-item__btns-item:hover{
-    background-color: #00c8c8;
-}
-.products-item__btns-item:active{
-    transition-duration: 100ms;
-    transform: scale(0.9);
-    opacity: 0.5;
-}
-.products-item__price{
+.products-item__ref{
     font-size: 21px;
     font-family: "Montserrat";
     color: #9a9a9a;
@@ -508,15 +493,28 @@
     top:10px;
     left: 10px;
     margin: 0;
+    display: flex;
+}
+.products-item__ref-text-small{
+    font-size: 12px;
+}
+.products-item__actions{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 .products-item__details-link{
     font-size: 48px;
     color: white;
     text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    margin-right: 30px;
+}
+.products-item__like{
+    font-size: 48px;
+    color: white;
+    text-decoration: none;
 }
 .products-item__details-link:hover{
     color: #00c8c8;
@@ -526,27 +524,110 @@
     transform: scale(0.9);
     opacity: 0.5;
 }
-.products-item__thumbs{
-    width: 80px;
-    position: absolute;
-    top:10px;
-    right: 10px;
+.products-item__like:hover{
+    color: #00c8c8;
 }
-.products-item__thumbs-item:first-child{
-    margin-bottom: 10px;
-}
-.products-item__thumbs-item{
-    cursor: pointer;
-    display: flex;
-}
-.products-item__thumbs-item:hover{
-    border: 1px solid #727272;
-}
-.products-item__thumb-images{
-    width: 100%;
+.products-item__like:active i{
+    transition-duration: 100ms;
+    transform: scale(0.9);
+    opacity: 0.5;
 }
 .products-item__more-information{
     display: none;
+}
+.products-item_janes-lookbook{
+    background: url('../images/lookbook/products-item-bg-1.png');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.products-item_win-a-new-book{
+    background: url('../images/lookbook/products-item-bg-2.png');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.products-item__information{
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.products-item__title{
+    font-size: 48px;
+    font-family: "Montserrat";
+    color: #575153;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 54px;
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+.products-item__sub-title{
+    font-size: 13px;
+    font-family: "Montserrat";
+    color: #727272;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin: 20px 0;
+}
+.products-item__description{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: #8e8c8c;
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.products-item_janes-lookbook .products-item__description{
+    max-width: 320px;
+}
+.products-item_win-a-new-book .products-item__description{
+    max-width: 500px;
+}
+.products-item__btn{
+    width: 180px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.products-item__btn:hover{
+    background-color: #00c8c8;
+    color: white;
+    border-color: #00c8c8;
+}
+.products-item__btn:active{
+    transform: scale(0.95);
+    opacity: 0.5;
+    transition-duration: 50ms;
+}
+.products-item__bg-text-container{
+    position: absolute;
+    z-index: 0;
+    bottom: 110px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.products-item__bg-text-small-word{
+    font-size: 3vw;
+    font-family: "Montserrat";
+    color: #00c8c8;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 54px;
+    margin: 0;
+}
+.products-item__bg-text-big-word{
+    font-size: 8.5vw;
+    font-family: "Montserrat";
+    color: #00c8c8;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
 }
 .lookbook-item{
     padding: 0 50px;
@@ -707,6 +788,19 @@
     .footer__bottom-bar{
         padding: 0 134px;
     }
+    .products-container{
+        display: grid;
+          margin: 0 auto;
+          margin-top: 62px;
+          grid-template-areas: 
+        "pi-1 pi-2 pi-3"
+        "lookbook-1 lookbook-1 pi-4"
+        "pi-5 pi-6 pi-7"
+        "lookbook-2 lookbook-2 lookbook-2";
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+    }
 }
 @media (min-width: 1000px) and (max-width: 1400px) {
     .banner__text{
@@ -766,6 +860,22 @@
     .sub-nav__banner{
         padding: 20px;
     }
+    .products-container{
+        display: grid;
+          margin: 0 auto;
+          margin-top: 62px;
+          grid-template-areas: 
+        "pi-1 pi-2"
+        "lookbook-1 lookbook-1"
+        "pi-3 pi-4"
+        "pi-5 pi-6"
+        "lookbook-2 lookbook-2"
+        "pi-7 pi-7";
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+      justify-items: center;
+    }
 }
 @media (min-width: 700px) and (max-width: 1000px) {
     .banner__text{
@@ -813,17 +923,8 @@
         margin-top: 20px;
         flex-basis: auto;
     }
-    .header-slider__btn{
-        right: 134px;
-    }
-    .header-slider__text{
-        font-size: 20.5vw;
-    }
     .products-item__price{
         font-size: 14px;
-    }
-    .header-content{
-        height: 570px;
     }
     .header-slider__btn{
         height: 40px;
@@ -849,6 +950,22 @@
     }
     .sub-nav{
         width: 340px;
+    }
+    .products-container{
+        display: grid;
+          margin: 0 auto;
+          margin-top: 62px;
+          grid-template-areas: 
+        "pi-1 pi-2"
+        "lookbook-1 lookbook-1"
+        "pi-3 pi-4"
+        "pi-5 pi-6"
+        "lookbook-2 lookbook-2"
+        "pi-7 pi-7";
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+      justify-items: center;
     }
 }
 @media (min-width: 320px) and (max-width: 760px) {
@@ -941,9 +1058,6 @@
     .products-item__price{
         font-size: 14px;
     }
-    .header-content{
-        height: 570px;
-    }
     .header-slider__btn{
         height: 40px;
         width: 190px;
@@ -1008,7 +1122,7 @@
     .sub-nav__banner{
         padding: 20px;
     }
-    .sub-nav .banner__text{
+    .sub-nav__banner .banner__text{
         font-size: 12px;
         line-height: 20px;
     }
@@ -1045,5 +1159,45 @@
         transition-property:transform;
         transition-duration: 100ms;
         transform: rotate(135deg);
+    }
+    .products-container{
+        display: grid;
+          margin: 0 auto;
+          margin-top: 62px;
+          grid-template-areas: 
+        "pi-1"
+        "pi-2"
+        "lookbook-1"
+        "pi-3"
+        "pi-4"
+        "pi-5"
+        "pi-6"
+        "lookbook-2"
+        "pi-7";
+      grid-template-columns: 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+      justify-items: center;
+    }
+    .products-item__title{
+        font-size: 38px;
+    }
+    .products-item_janes-lookbook{
+        justify-content: center;
+    }
+    .products-item_win-a-new-book{
+        justify-content: center;
+    }
+    .products-item__information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .products-item__bg-text-container{
+        display: none;
+    }
+    .intro__letters{
+        padding: 0;
     }
 }

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/styles/normalize.css" rel="stylesheet">
     <link href="assets/styles/all.css" rel="stylesheet">
-    <link href="assets/styles/home.css" rel="stylesheet">
+    <link href="assets/styles/lookbook.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-    <title>Home</title>
-    <script defer src="assets/scripts/home.js"></script>
+    <title>lookbook</title>
+    <script defer src="assets/scripts/lookbook.js"></script>
 </head>
 <body>
     <header class="header header_margin">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-            <div class="header-content header-content_height_home">
+            <div class="header-content">
                 <div class="nav-bar header-content__nav-bar">
                     <div class="wrapper wrapper_display_flex">
                         <div class="logo">
@@ -109,10 +109,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="header-slider">
-                    <div class="header-slider__wrapper">
-                        <p class="header-slider__text">a v e</p>
-                        <a href="#" class="header-slider__btn btn">shop men’s collection</a>
+                <div class="intro">
+                    <div class="wrapper wrapper_display_flex">
+                        <div class="intro__text">
+                            <h2 class="intro__title"><span class="bold-word">our</span> lookbook</h2>
+                            <p class="intro__slogan">Latest Posts - mens & womens</p>
+                        </div>
+                        <p class="intro__letters">a v e</p>
                     </div>
                 </div>
             </div>
@@ -123,221 +126,174 @@
                 <div class="nav-bar main__nav-bar">
                     <nav class="nav main__nav">
                         <div class="nav__item">
-                            <a class="nav__btn" href="#">popular</a>
+                            <a class="nav__btn" href="#">latest</a>
                         </div>
                         <div class="nav__item">
-                            <a class="nav__btn" href="#">new arrivals</a>
+                            <a class="nav__btn" href="#">most liked</a>
                         </div>
                         <div class="nav__item">
                             <a class="nav__btn" href="#">best sellers</a>
                         </div>
                         <div class="nav__item">
-                            <a class="nav__btn" href="#">special offers</a>
+                            <a class="nav__btn" href="#">price low to high</a>
                         </div>
                         <div class="nav__item">
-                            <a class="nav__btn" href="#">coming soon</a>
+                            <a class="nav__btn" href="#">price high to low</a>
                         </div>
                     </nav>
                 </div>
                 <div class="products-container">
-                    <div class="products-container__column">
-                        <div class="products-container__row">
-                            <div class="products-item">
-                                <img src="assets/images/home/products-item-1.png" alt="products-item-1" class="products-item__image">
-                                <p class="products-item__price">
-                                    <span class="products-item__currency">&pound;</span>
-                                    <span class="products-item__old-price"></span>
-                                    89.99
-                                </p>
-                                <div class="products-item__more-information">
-                                    <div class="products-item__thumbs">
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-front.png" alt="thumb-front" class="products-item__thumb-images">
-                                        </div>
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-back.png" alt="thumb-back" class="products-item__thumb-images">
-                                        </div>
-                                    </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-1.png" alt="products-item-1" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                M1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
                                     <a href="" class="products-item__details-link">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <div class="products-item__info">
-                                        <p class="products-item__title">Womens burnt orange casual tee  <span class="products-item__currency">&pound;</span>29.95</p>
-                                        <p class="products-item__description">Classic casual t-shirt for women on the move. 
-                                            100% cotton.</p>
-                                        <div class="products-item__btns">
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-shopping-cart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="far fa-heart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-compress-alt products-item__btns-icon"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="products-item">
-                                <img src="assets/images/home/products-item-2.png" alt="products-item-2" class="products-item__image">
-                                <p class="products-item__price">
-                                    <span class="products-item__currency">&pound;</span>
-                                    <span class="products-item__old-price"></span>
-                                    89.99
-                                </p>
-                                <div class="products-item__more-information">
-                                    <div class="products-item__thumbs">
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-front.png" alt="thumb-front" class="products-item__thumb-images">
-                                        </div>
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-back.png" alt="thumb-back" class="products-item__thumb-images">
-                                        </div>
-                                    </div>
-                                    <a href="" class="products-item__details-link">
-                                        <i class="fas fa-info-circle"></i>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
                                     </a>
-                                    <div class="products-item__info">
-                                        <p class="products-item__title">Womens burnt orange casual tee  <span class="products-item__currency">&pound;</span>29.95</p>
-                                        <p class="products-item__description">Classic casual t-shirt for women on the move. 
-                                            100% cotton.</p>
-                                        <div class="products-item__btns">
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-shopping-cart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="far fa-heart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-compress-alt products-item__btns-icon"></i></a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="products-container__row">
-                            <div class="products-item">
-                                <img src="assets/images/home/products-item-3.png" alt="products-item-3" class="products-item__image">
-                                <p class="products-item__price">
-                                    <span class="products-item__currency">&pound;</span>
-                                    <span class="products-item__old-price"></span>
-                                    89.99
-                                </p>
-                                <div class="products-item__more-information">
-                                    <div class="products-item__thumbs">
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-front.png" alt="thumb-front" class="products-item__thumb-images">
-                                        </div>
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-back.png" alt="thumb-back" class="products-item__thumb-images">
-                                        </div>
-                                    </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-2.png" alt="products-item-1" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                W1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
                                     <a href="" class="products-item__details-link">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <div class="products-item__info">
-                                        <p class="products-item__title">Womens burnt orange casual tee  <span class="products-item__currency">&pound;</span>29.95</p>
-                                        <p class="products-item__description">Classic casual t-shirt for women on the move. 
-                                            100% cotton.</p>
-                                        <div class="products-item__btns">
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-shopping-cart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="far fa-heart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-compress-alt products-item__btns-icon"></i></a>
-                                        </div>
-                                    </div>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="products-container__column">
-                        <div class="products-container__row">
-                            <div class="products-item">
-                                <img src="assets/images/home/products-item-4.png" alt="products-item-4" class="products-item__image">
-                                <p class="products-item__price">
-                                    <span class="products-item__currency">&pound;</span>
-                                    <span class="products-item__old-price"></span>
-                                    89.99
-                                </p>
-                                <div class="products-item__more-information">
-                                    <div class="products-item__thumbs">
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-front.png" alt="thumb-front" class="products-item__thumb-images">
-                                        </div>
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-back.png" alt="thumb-back" class="products-item__thumb-images">
-                                        </div>
-                                    </div>
+                        <div class="products-item products-item_janes-lookbook">
+                            <div class="products-item__information">
+                                <h4 class="products-item__title"><span class="bold-word">Jane’s</span> lookbook</h4>
+                                <h5 class="products-item__sub-title">get the look for under &pound;200! copy</h5>
+                                <p class="products-item__description">We invited actress Jane Marshall to join us 
+                                    for the day and choose her perfect outfit from 
+                                    our vast range of womens fashion.
+                                    </p>
+                                    <p class="products-item__description">This is of course not true as this is just a design 
+                                        for a website and this is simply filler text.
+                                    </p>
+                                <a href="" class="products-item__btn btn">view now</a>
+                            </div>
+                        </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-3.png" alt="products-item-3" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                M1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
                                     <a href="" class="products-item__details-link">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <div class="products-item__info">
-                                        <p class="products-item__title">Womens burnt orange casual tee  <span class="products-item__currency">&pound;</span>29.95</p>
-                                        <p class="products-item__description">Classic casual t-shirt for women on the move. 
-                                            100% cotton.</p>
-                                        <div class="products-item__btns">
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-shopping-cart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="far fa-heart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-compress-alt products-item__btns-icon"></i></a>
-                                        </div>
-                                    </div>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="products-container__row">
-                            <div class="products-item">
-                                <img src="assets/images/home/products-item-5.png" alt="products-item-5" class="products-item__image">
-                                <p class="products-item__price">
-                                    <span class="products-item__currency">&pound;</span>
-                                    <span class="products-item__old-price"></span>
-                                    89.99
-                                </p>
-                                <div class="products-item__more-information">
-                                    <div class="products-item__thumbs">
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-front.png" alt="thumb-front" class="products-item__thumb-images">
-                                        </div>
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-back.png" alt="thumb-back" class="products-item__thumb-images">
-                                        </div>
-                                    </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-4.png" alt="products-item-4" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                W1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
                                     <a href="" class="products-item__details-link">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <div class="products-item__info">
-                                        <p class="products-item__title">Womens burnt orange casual tee  <span class="products-item__currency">&pound;</span>29.95</p>
-                                        <p class="products-item__description">Classic casual t-shirt for women on the move. 
-                                            100% cotton.</p>
-                                        <div class="products-item__btns">
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-shopping-cart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="far fa-heart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-compress-alt products-item__btns-icon"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="products-item">
-                                <img src="assets/images/home/products-item-6.png" alt="products-item-6" class="products-item__image">
-                                <p class="products-item__price">
-                                    <span class="products-item__currency">&pound;</span>
-                                    <span class="products-item__old-price"></span>
-                                    89.99
-                                </p>
-                                <div class="products-item__more-information">
-                                    <div class="products-item__thumbs">
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-front.png" alt="thumb-front" class="products-item__thumb-images">
-                                        </div>
-                                        <div class="products-item__thumbs-item">
-                                            <img src="assets/images/home/products-item-5-thumb-back.png" alt="thumb-back" class="products-item__thumb-images">
-                                        </div>
-                                    </div>
-                                    <a href="" class="products-item__details-link">
-                                        <i class="fas fa-info-circle"></i>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
                                     </a>
-                                    <div class="products-item__info">
-                                        <p class="products-item__title">Womens burnt orange casual tee  <span class="products-item__currency">&pound;</span>29.95</p>
-                                        <p class="products-item__description">Classic casual t-shirt for women on the move. 
-                                            100% cotton.</p>
-                                        <div class="products-item__btns">
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-shopping-cart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="far fa-heart products-item__btns-icon"></i></a>
-                                            <a href="" class="products-item__btns-item"><i class="fas fa-compress-alt products-item__btns-icon"></i></a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-5.png" alt="products-item-5" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                W1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
+                                    <a href="" class="products-item__details-link">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-6.png" alt="products-item-6" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                W1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
+                                    <a href="" class="products-item__details-link">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-item products-item_win-a-new-book">
+                            <div class="products-item__information">
+                                <h4 class="products-item__title"><span class="bold-word">Win</span> a new look!</h4>
+                                <h5 class="products-item__sub-title">add looks or items to your lookbook for a chance of winning</h5>
+                                <p class="products-item__description">See an item or a complete look you like, click the &hearts; button to add it to your 
+                                    lookbook and you’ll be automatically entered to our monthly draw where 
+                                    one winner gets a &pound;300 gift voucher to spend on our website!
+                                    </p>
+                                    <p class="products-item__description">Terms: No purchase necessary. Vouchers are non-transferable and no 
+                                        cash alternative is ofered. Competition is for members only.
+                                    </p>
+                                <a href="" class="products-item__btn btn">shop now</a>
+                            </div>
+                            <div class="products-item__bg-text-container">
+                                <p class="products-item__bg-text-big-word">win</p>
+                                <p class="products-item__bg-text-small-word">a new look</p>
+                            </div>
+                        </div>
+                        <div class="products-item">
+                            <img src="assets/images/lookbook/products-item-7.png" alt="products-item-7" class="products-item__image">
+                            <p class="products-item__ref">
+                                <span class="products-item__ref-text-small">ref</span>
+                                M1
+                            </p>
+                            <div class="products-item__more-information">
+                                <div class="products-item__actions">
+                                    <a href="" class="products-item__details-link">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                    <a href="" class="products-item__like">
+                                        <i class="fab fa-gratipay"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
